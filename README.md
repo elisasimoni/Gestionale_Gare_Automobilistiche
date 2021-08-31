@@ -1,4 +1,4 @@
-![logo](https://user-images.githubusercontent.com/73821477/131556303-dd5a56ad-a97d-447d-9d02-d1a4699c106d.png)
+
 # GESTIONALE DI CONSULTAZIONE GARE AUTOMOBILISTICHE
 ## Project setup
 ```
