@@ -1,5 +1,4 @@
-# untitled
-
+# GESTIONALE DI CONSULTAZIONE GARE AUTOMOBILISTICHE
 ## Project setup
 ```
 npm install
@@ -22,3 +21,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Creators: 
+Sofia Bagagli
+Davide Baldelli
+Elisa Simoni
