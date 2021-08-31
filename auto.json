@@ -1,0 +1,20 @@
+{
+  "auto": [
+    {
+
+      "name": "Lamborghini",
+      "model": "Modello",
+      "cavalli": "300"
+    },
+    {
+      "name": "Ferrari",
+      "model": "Modello",
+      "cavalli": "300"
+    },
+    {
+      "name": "Lamborghini",
+      "model": "Modello3",
+      "cavalli": "300"
+    }
+  ]
+}
