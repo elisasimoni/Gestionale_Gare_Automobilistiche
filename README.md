@@ -1,5 +1,8 @@
-
 # GESTIONALE DI CONSULTAZIONE GARE AUTOMOBILISTICHE
+
+![HOME](https://user-images.githubusercontent.com/73821477/132094404-ce453bec-06c3-408b-b2ed-5df4bdfa96c7.PNG)
+
+
 ## Project setup
 ```
 npm install
