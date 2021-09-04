@@ -44,10 +44,10 @@
           <th scope="col">Anno</th>
           <th scope="col">Brand</th>
           <th scope="col">Classe</th>
+          <th scope="col">Trazione</th>
           <th scope="col">Trasmissione</th>
-          <th scope="col">Cambio</th>
-          <th scop="col">Numero di Gara</th>
-          <th scop="col">Team</th>
+          <th scope="col">Numero di Gara</th>
+          <th scope="col">Team</th>
         </tr>
         </thead>
         <tbody>
@@ -75,8 +75,8 @@
           <th scope="col">Anno</th>
           <th scope="col">Brand</th>
           <th scope="col">Classe</th>
+          <th scope="col">Trazione</th>
           <th scope="col">Trasmissione</th>
-          <th scope="col">Cambio</th>
         </tr>
         </thead>
         <tbody>

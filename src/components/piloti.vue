@@ -103,8 +103,8 @@
       <th scope="col">Anno</th>
       <th scope="col">Produttore</th>
       <th scope="col">Classe</th>
+      <th scope="col">Trazione</th>
       <th scope="col">Trasmissione</th>
-      <th scope="col">Cambio</th>
     </tr>
     </thead>
     <tbody>

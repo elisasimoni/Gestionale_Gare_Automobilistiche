@@ -6,6 +6,10 @@
   <form >
     <p align="center"><input  placeholder="Nome"  v-model.trim="nome"></p>
     <p align="center"><input  placeholder="Cognome" v-model.trim="cognome"></p>
+   <form v-if="nome != nullo && cognome!=nullo">
+     <p align="center"> <button tag="button" @click="getFirstNameLetter(nome), generate=true">GENERA CF</button>
+      <template v-if="generate" id="cf">{{this.first + this.cognome}}</template></p>
+    </form>
     <form>
      <p align="center"> <label>Inserire data di nascita:
         <input type="date"  v-model.trim="compleanno">
@@ -57,7 +61,9 @@ export default {
       countries: {},
       teams:{},
       team:"",
-      nullo:""
+      nullo:"",
+      first:"",
+      generate: false
 
 
     }
@@ -65,6 +71,7 @@ export default {
   mounted(){
     this.getNation();
     this.getTeams();
+    this.getFirstNameLetter();
   },
   methods: {
     async getNation(){
@@ -76,8 +83,11 @@ export default {
       const res = await fetch('http://api.progdb.davidebaldelli.it:1234/team/all');
       const data = await res.json();
       this.teams = data;
+    },
+    getFirstNameLetter(name) {
+      var x = name;
+      this.first = (x.charAt(0));
     }
-
 
 
 
@@ -101,5 +111,11 @@ export default {
   height: 40px;
   background-color: red;
   color: #FFFFFF;
+}
+#cf{
+  text-align: center;
+  font-family: "Arial Black";
+  font-size: medium;
+
 }
 </style>
