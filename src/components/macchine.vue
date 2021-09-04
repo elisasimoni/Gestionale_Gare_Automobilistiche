@@ -1,6 +1,9 @@
 <template>
   <body>
+  <img class="background" src="@/assets/sfo.jpg">
+  <router-link id="homeButton" to="dbSelect" tag="button"><img id="home" src="@/assets/arrow.png"></router-link>
 <h1>AUTO</h1>
+
   <table  class="table">
     <thead>
     <tr>
@@ -8,8 +11,8 @@
       <th scope="col">Anno</th>
       <th scope="col">Produttore</th>
       <th scope="col">Classe</th>
+      <th scope="col">Trazione</th>
       <th scope="col">Trasmissione</th>
-      <th scope="col">Cambio</th>
     </tr>
     </thead>
     <tbody>
@@ -51,6 +54,18 @@ export default {
 </script>
 
 <style>
+.background{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 98.5%;
+  height: 100%;
+  overflow: hidden;
+
+
+}
 table {
   border-spacing: 1px;
   border-collapse: collapse;

@@ -11,6 +11,8 @@ import circuiti from "@/components/circuiti"
 import piloti from "@/components/piloti"
 import statistiche from "@/components/statistiche";
 import macchine from "@/components/macchine";
+import creaPilota from "@/components/creaPilota";
+import risultati from "@/components/risultati";
 Vue.use(Router)
 
 
@@ -73,6 +75,16 @@ export default new Router({
             path:"/macchine",
             name: 'macchine',
             component: macchine
+        },
+        {
+            path:"/creaPilota",
+            name: 'creaPilota',
+            component: creaPilota
+        },
+        {
+            path:"/risultati",
+            name: 'risultati',
+            component: risultati
         }
     ]
 })

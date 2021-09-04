@@ -1,6 +1,9 @@
 <template>
 
   <body>
+
+  <img class="background" src="@/assets/sfo.jpg">
+  <router-link id="homeButton" to="dbSelect" tag="button"><img id="home" src="@/assets/arrow.png"></router-link>
   <h1>PRODUTTORI</h1>
   <table class="table">
     <thead>
@@ -42,7 +45,18 @@ export default {
 };
 </script>
 <style>
+.background{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 98.5%;
+  height: 100%;
+  overflow: hidden;
 
+
+}
 table {
   border-spacing: 1px;
   border-collapse: collapse;

@@ -1,9 +1,11 @@
 <template>
 
   <body>
+  <img class="background" src="@/assets/sfo.jpg">
+  <router-link id="homeButton" to="dbSelect" tag="button"><img id="home" src="@/assets/arrow.png"></router-link>
   <h1>STATISTICHE</h1>
   <form id="formSelect3">
-    <h3>numero di iscrizioni ai campionati di un produttore</h3>
+    <h3>numero di volte in cui l'auto di un produttore ha partecipato a un campionato</h3>
     <p align="center"> Scegli produttore:
       <select id="selectStyle3" v-model="nomeProd"  >
         <option v-for="productor in manufacturer" :key="productor.Name"  >{{productor.Name}}</option>
@@ -158,7 +160,18 @@ export default {
 };
 </script>
 <style>
+.background{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 98.5%;
+  height: 100%;
+  overflow: hidden;
 
+
+}
 table {
   border-spacing: 1px;
   border-collapse: collapse;
@@ -204,6 +217,21 @@ h2{
   font-style: italic;
   color: black;
 }
+#confermaProduttore {
+  color: white;
+  background-color: red;
+  text-align: center;
+  font-style: italic;
+  font-family: "Arial Black";
+}
+#confermaPista{
+  color: white;
+  background-color: red;
+  text-align: center;
+  font-style: italic;
+  font-family: "Arial Black";
+}
+
 
 blockquote {
   color:white;

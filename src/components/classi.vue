@@ -1,6 +1,8 @@
 <template>
 
   <body>
+  <img class="background" src="@/assets/sfo.jpg">
+  <router-link id="homeButton" to="dbSelect" tag="button"><img id="home" src="@/assets/arrow.png"></router-link>
   <h1>CLASSI</h1>
 
   <table class="table">
@@ -19,10 +21,11 @@
   </table>
   <h2>Cerca Gare in base alla Classe</h2>
   <form class="example"  style="margin:auto;max-width:300px">
-    <input type="text" v-model.trim="classe" placeholder="Search.." >
+    <input type="text" v-model.trim="classe" placeholder="Search..">
     <button @click = getGara(classe)  type="submit"><i class="fa fa-search"></i>CERCA</button>
+
   </form>
-    <template v-if="this.isOn" class="ricerca">
+    <template v-if="this.isOn" >
     <table  class="table">
       <thead>
       <tr>
@@ -141,6 +144,18 @@ export default {
 </script>
 <style>
 
+.background{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 98.5%;
+  height: 100%;
+  overflow: hidden;
+
+
+}
 table {
   border-spacing: 1px;
   border-collapse: collapse;
@@ -148,7 +163,7 @@ table {
   border-radius: 6px;
   overflow: hidden;
   max-width: 800px;
-  width: 100%;
+  width: 50%;
   margin: 0 auto;
   position: relative;
 }
@@ -191,7 +206,7 @@ form.example button {
   font-style: italic;
   font-family: "Arial Black";
   font-size: 12px;
-
+height: 47px;
   position: absolute;
   border: 1px solid grey;
   border-left: none;

@@ -2,6 +2,7 @@
 
 
   <html lang="en">
+  <img class="background" src="@/assets/sfo.jpg">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">

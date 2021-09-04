@@ -1,6 +1,8 @@
 <template>
 
   <body>
+  <img class="background" src="@/assets/sfo.jpg">
+  <router-link id="homeButton" to="dbSelect" tag="button"><img id="home" src="@/assets/arrow.png"></router-link>
   <h1>CIRCUITI</h1>
   <table class="table">
     <thead>
@@ -8,8 +10,8 @@
       <th scope="col">Nome</th>
       <th scope="col">Nazione</th>
       <th scope="col">Città</th>
-
       <th scope="col">Layout</th>
+
 
 
     </tr>
@@ -19,13 +21,13 @@
       <th scope="row">{{circuit.Name}}</th>
       <td>{{circuit.Nation}}</td>
       <td>{{circuit.Location}}</td>
-      <td>{{circuit.Name}}</td>
-<!--      <div v-for="layout in circuit.Layouts" :key="layout.Name">-->
-<!--        <td>Nome: {{layout.Name}}</td>-->
-<!--        <td>Lughezza: {{layout.Length}}</td>-->
-<!--        <td>Tipologia: {{layout.TrackType}}</td>-->
 
-<!--      </div>-->
+      <div v-for="layout in circuit.Layouts" :key="layout.Name">
+        <td> {{layout.Name}}</td>
+        <td>{{layout.Length}}</td>
+        <td> {{layout.TrackType}}</td>
+
+      </div>
 
     </tr>
     </tbody>
