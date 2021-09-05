@@ -13,6 +13,7 @@ import statistiche from "@/components/statistiche";
 import macchine from "@/components/macchine";
 import creaPilota from "@/components/creaPilota";
 import risultati from "@/components/risultati";
+import gare from "@/components/gare";
 Vue.use(Router)
 
 
@@ -85,6 +86,12 @@ export default new Router({
             path:"/risultati",
             name: 'risultati',
             component: risultati
+        },
+        {
+            path:"/gare",
+            name: 'gare',
+            component: gare
+
         }
     ]
 })

@@ -14,9 +14,11 @@
       <li><router-link to="classi"><img class="ImgProduct" src="@/assets/classe.png"></router-link><p>CLASSI</p></li>
       <li><router-link to="macchine"><img class="ImgProduct" src="@/assets/auto.png"></router-link><p>AUTO</p></li>
       <li><router-link to="produttori"><img class="ImgProduct" src="@/assets/meccanico.png"></router-link><p>PRODUTTORI</p></li>
-      <li><router-link to="statistiche"><img class="ImgProduct" src="@/assets/statistica.png"></router-link><p>STATISTICHE</p></li>
+      <li><router-link to="gare"><img class="ImgProduct" src="@/assets/pole.png"></router-link><p>GARE</p></li>
       <li><router-link to="risultati"><img class="ImgProduct" src="@/assets/podio.png"></router-link><p>RISULTATI</p></li>
+      <li><router-link to="statistiche"><img class="ImgProduct" src="@/assets/statistica.png"></router-link><p>STATISTICHE</p></li>
       <li><router-link to="creaPilota"><img class="ImgProduct" src="@/assets/crea.png"></router-link><p>CREA PILOTA</p></li>
+
 
     </ul>
   </div>

@@ -7,8 +7,10 @@
     <p align="center"><input  placeholder="Nome"  v-model.trim="nome"></p>
     <p align="center"><input  placeholder="Cognome" v-model.trim="cognome"></p>
    <form v-if="nome != nullo && cognome!=nullo">
-     <p align="center"> <button tag="button" @click="getFirstNameLetter(nome), generate=true">GENERA CF</button>
-      <template v-if="generate" id="cf">{{this.first + this.cognome}}</template></p>
+     <p align="center"> <button tag="button" @click="getFirstNameLetter(nome), generate=true">GENERA CF</button></p>
+      <template v-if="generate" id="cf">
+        <h3 align="center">{{this.first + this.cognome}}</h3>
+      </template>
     </form>
     <form>
      <p align="center"> <label>Inserire data di nascita:
