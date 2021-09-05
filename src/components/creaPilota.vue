@@ -102,7 +102,8 @@
       </p>
     </form>
    <form v-if="pilot.Name != nullo && pilot.Surname!=nullo">
-     <p align="center"> <button tag="button" @click="getFirstNameLetter(pilot.Name),saveCF(first,pilot.Surname), addDateFuso(data,fuso), generate=true">GENERA CF</button></p>
+     <p align="center"> <button tag="button" @click="getFirstNameLetter(pilot.Name),saveCF(first,pilot.Surname), addDateFuso(data,fuso), generate=true">GENERA CF</button> Compleanno: {{pilot.Birthdate}}</p>
+
      <template v-if="generate" id="cf">
         <h3 align="center">{{this.first + this.pilot.Surname}}</h3>
 
@@ -127,10 +128,7 @@
     <p align="center">
 
       <template v-if="pilot.Name!=nullo && pilot.Surname !=nullo && pilot.Sex!=nullo  && pilot.Nation!=nullo && pilot.Birthdate!=nullo">
-      <input  id="creapilota" type="button" value="Inserisci" @click="newPilot, right=true"/>
-        <template v-if="right">
-              Hai creato correttamente il pilota {{pilot.Name}} {{pilot.Surname}}
-        </template>
+      <input  id="creapilota" type="button" value="Inserisci" @click="newPilot" />
 
       </template>
       <template v-if="pilot.Name==nullo || pilot.Surname ==nullo || pilot.Sex==nullo ||  pilot.Nation==nullo || pilot.Birthdate==nullo">
@@ -139,6 +137,9 @@
       </template>
 
     </p>
+    <template v-if="this.right==1">
+      Hai creato correttamente il pilota {{pilot.Name}} {{pilot.Surname}}
+    </template>
   </form>
   </body>
 </template>
@@ -169,7 +170,8 @@ export default {
     postId:"",
       data:"",
       fuso:":00+01:00",
-      right:false
+      right:0,
+
 
     }
   },
@@ -197,6 +199,7 @@ export default {
       this.first = (x.charAt(0));
     },
     async newPilot(){
+      this.right=1;
       this.axios.post("https://api.progdb.davidebaldelli.it/driver/new", this.pilot).then(res=>console.log(res.data)).catch(error=>console.log(error));
     },
     saveCF(a,b){
