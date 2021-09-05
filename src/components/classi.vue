@@ -112,12 +112,12 @@ export default {
   methods: {
 
     async getName(){
-      const res = await  fetch('https://api.progdb.davidebaldelli.it:1234/class/all');
+      const res = await  fetch('https://api.progdb.davidebaldelli.it/class/all');
       const data = await res.json();
       this.classi = data;
     },
     async getGara(classe){
-      const res2 = await fetch('https://api.progdb.davidebaldelli.it:1234/race/class/' + classe);
+      const res2 = await fetch('https://api.progdb.davidebaldelli.it/race/class/' + classe);
       const data2 = await res2.json();
       this.gareClasse = data2;
       if(classe == null){
@@ -128,7 +128,7 @@ export default {
       }
     },
     async getCampionato(classe){
-      const res3 = await fetch('https://api.progdb.davidebaldelli.it:1234/championship/class/' + classe);
+      const res3 = await fetch('https://api.progdb.davidebaldelli.it/championship/class/' + classe);
       const data3 = await res3.json();
       this.campionatiClasse = data3;
       if(classe == null){
