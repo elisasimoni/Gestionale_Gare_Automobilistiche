@@ -5,50 +5,7 @@
   <router-link id="homeButton" to="dbSelect" tag="button"><img id="home" src="@/assets/arrow.png"></router-link>
   <h1>STATISTICHE</h1>
 
-    <h3>Ottenere i dati di una Entry in particolare</h3>
-    <p align="center"> Scegli campionato:
-      <select id="selectStyle3" v-model.trim="nomeCampionato"  >
-        <option v-for="champ in championship" :key="champ.Name"  >{{champ.Name}}</option>
-      </select>
-      <select id="selectStyle4" v-model.trim="annoCampionato"  >
-        <option v-for="champio in championship" :key="champio.Name"  >{{champio.Year}}</option>
-      </select>
-      <input type="text" v-model.trim="numeroDiGara" placeholder="Numero di gara">
 
-      <input  type="submit" value='Conferma' @click="getEntry(nomeCampionato, annoCampionato, numeroDiGara), isEntry=true" ></p>
-<template v-if="isEntry">
-  <table  class="table">
-    <thead>
-    <tr>
-      <th scope="col">Modello</th>
-      <th scope="col">Anno</th>
-      <th scope="col">Produttore</th>
-      <th scope="col">Classe</th>
-      <th scope="col">Trazione</th>
-      <th scope="col">Trasmissione</th>
-      <th scope="col">Numero di gara</th>
-      <th scope="col">Piloti</th>
-      <th scope="col">Team</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr v-for="entrys in entry" :key="entrys.RaceNumber">
-      <div v-for="car in entrys.Car" :key="car.Model">
-        <td> {{car.Model}}</td>
-        <td>{{car.Year}}</td>
-        <td> {{car.Brand.Name}}</td>
-
-      </div>
-
-
-
-    </tr>
-
-
-
-    </tbody>
-  </table>
-</template>
   <form id="formSelect3">
     <h3>numero di volte in cui l'auto di un produttore ha partecipato a un campionato</h3>
     <p align="center"> Scegli produttore:
@@ -160,12 +117,7 @@ export default {
       track:{},
       layouts:{},
       pista:"",
-      championship:{},
-      isEntry:false,
-      entry:{},
-      nomeCampionato:"",
-      annoCampionato:"",
-      numeroDiGara:"",
+
 
 
     }
@@ -177,8 +129,7 @@ export default {
     this.getPartecipationCar();
     this.getNameTrack();
     this.getPartecipationLayout();
-    this.getChampionship();
-    this.getEntry();
+
   },
   methods: {
 
@@ -207,21 +158,7 @@ export default {
       const data2 = await res2.json();
       this.layouts = data2;
     },
-    async getChampionship(){
-      const res2 = await  fetch('http://api.progdb.davidebaldelli.it:1234/championship/all');
-      const data2 = await res2.json();
-      this.championship = Object.values(data2.reduce((r, o) => {
-        r[o.Name] = r[o.Name] || o;
-        return r;
-      },{}));
-    },
-    async getEntry(nome, anno, ngara){
-      const res2 = await  fetch('http://api.progdb.davidebaldelli.it:1234/entry/championship/' + nome +'/'+ anno + '/'+ ngara);
-      const data2 = await res2.json();
-      const prova = 'http://api.progdb.davidebaldelli.it:1234/entry/championship/' + nome +'/'+ anno + '/'+ ngara;
-      console.log(prova);
-      this.entry = data2;
-    }
+
 
 
 

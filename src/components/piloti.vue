@@ -299,6 +299,8 @@ export default {
     },
     async getAutoPilot(cf, track){
       const res7 = await fetch('http://api.progdb.davidebaldelli.it:1234/car/driver/' + cf +'/track/' + track);
+      const prova = 'http://api.progdb.davidebaldelli.it:1234/car/driver/' + cf +'/track/' + track;
+      console.log(prova);
       const data7 = await res7.json();
       this.pilotCar =  data7;
 
@@ -365,6 +367,13 @@ button{
   position: center;
 }
 #confermaCarTrack{
+  color: white;
+  background-color: red;
+  text-align: center;
+  font-style: italic;
+  font-family: "Arial Black";
+}
+#{
   color: white;
   background-color: red;
   text-align: center;
