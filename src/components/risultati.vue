@@ -75,17 +75,17 @@ export default {
   methods: {
     async getResult(nomegara, nomecampionato, annocampionato){
 
-      const res = await fetch('http://api.progdb.davidebaldelli.it:1234/race/'+ nomegara + '/championship/'+ nomecampionato+ '/'+annocampionato+ '/result');
+      const res = await fetch('https://api.progdb.davidebaldelli.it/race/'+ nomegara + '/championship/'+ nomecampionato+ '/'+annocampionato+ '/result');
       const data = await res.json();
       this.result = data;
     },
     async getGare(){
-      const res3 = await fetch("http://api.progdb.davidebaldelli.it:1234/race/all");
+      const res3 = await fetch("https://api.progdb.davidebaldelli.it/race/all");
       const data3 = await res3.json();
       this.gare = data3;
     },
     async getChampionship(){
-      const res2 = await fetch('http://api.progdb.davidebaldelli.it:1234/championship/all');
+      const res2 = await fetch('https://api.progdb.davidebaldelli.it/championship/all');
       var data2 = await res2.json();
 
       this.championship = Object.values(data2.reduce((r, o) => {

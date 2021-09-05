@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     async getName(){
-      const res = await fetch('http://api.progdb.davidebaldelli.it:1234/team/all');
+      const res = await fetch('https://api.progdb.davidebaldelli.it/team/all');
       const data = await res.json();
       this.team = data;
     }

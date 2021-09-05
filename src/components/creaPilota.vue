@@ -185,7 +185,7 @@ export default {
       this.countries = data3;
     },
     async getTeams(){
-      const res = await fetch('http://api.progdb.davidebaldelli.it:1234/team/all');
+      const res = await fetch('https://api.progdb.davidebaldelli.it/team/all');
       const data = await res.json();
       this.teams = data;
     },
@@ -194,7 +194,7 @@ export default {
       this.first = (x.charAt(0));
     },
     async newPilot(){
-      this.axios.post("http://api.progdb.davidebaldelli.it:1234/driver/new", this.pilot).then(res=>console.log(res.data)).catch(error=>console.log(error));
+      this.axios.post("https://api.progdb.davidebaldelli.it/driver/new", this.pilot).then(res=>console.log(res.data)).catch(error=>console.log(error));
     },
     saveCF(a,b){
       this.pilot.CF=a+b;

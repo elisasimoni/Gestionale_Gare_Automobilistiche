@@ -135,11 +135,10 @@ export default {
     this.getName();
     this.getAutoCampionato();
     this.getEntry();
-    this.getYear();
   },
   methods: {
     async getName(){
-      const res = await fetch('http://api.progdb.davidebaldelli.it:1234/championship/all');
+      const res = await fetch('https://api.progdb.davidebaldelli.it/championship/all');
       const data = await res.json();
       this.championship = data;
       this.champList = Object.values(data.reduce((r, o) => {
@@ -149,19 +148,14 @@ export default {
 
     },
     async getAutoCampionato(nomeChamp, annoChamp){
-      const res2 = await fetch('http://api.progdb.davidebaldelli.it:1234/car/championship/' + nomeChamp + "/" + annoChamp);
+      const res2 = await fetch('https://api.progdb.davidebaldelli.it/car/championship/' + nomeChamp + "/" + annoChamp);
       const data2 = await res2.json();
       this.carChampion = data2;
     },
     async getEntry(nomeChamp, annoChamp){
-      const res3 = await fetch('http://api.progdb.davidebaldelli.it:1234/entry/championship/' + nomeChamp + "/" + annoChamp);
+      const res3 = await fetch('https://api.progdb.davidebaldelli.it/entry/championship/' + nomeChamp + "/" + annoChamp);
       const data3 = await res3.json();
       this.entry = data3;
-    },
-    async getYear(){
-      const resYear = await fetch('https://virtserver.swaggerhub.com/xeli00/OnlyYear/1.0.0/inventory');
-      const dataYear = await resYear.json();
-      this.Year = dataYear;
     }
   }
 };

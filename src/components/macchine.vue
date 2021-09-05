@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     async getCar(){
-      const res = await fetch('http://api.progdb.davidebaldelli.it:1234/car/all');
+      const res = await fetch('https://api.progdb.davidebaldelli.it/car/all');
       const data = await res.json();
       this.car = data;
     }

@@ -259,12 +259,12 @@ export default {
   },
   methods: {
     async getName(){
-      const res = await fetch('http://api.progdb.davidebaldelli.it:1234/driver/all');
+      const res = await fetch('https://api.progdb.davidebaldelli.it/driver/all');
       const data = await res.json();
       this.driver = data;
     },
     async getTopFive(){
-      const res2 = await fetch('http://api.progdb.davidebaldelli.it:1234/driver/fivewithmoreraces');
+      const res2 = await fetch('https://api.progdb.davidebaldelli.it/driver/fivewithmoreraces');
       const data2 = await res2.json();
       this.topfive = data2;
 
@@ -276,13 +276,13 @@ export default {
 
     },
     async getDriverNation(nation){
-      const res3 = await fetch("http://api.progdb.davidebaldelli.it:1234/race/nation/driver/" + nation);
+      const res3 = await fetch("https://api.progdb.davidebaldelli.it/race/nation/driver/" + nation);
       const data3 = await res3.json();
       this.countryPilot = data3;
 
     },
     async getChampionship(nation){
-      const res4 = await fetch("http://api.progdb.davidebaldelli.it:1234/championship/nation/driver/" + nation);
+      const res4 = await fetch("https://api.progdb.davidebaldelli.it/championship/nation/driver/" + nation);
       const data4 = await res4.json();
       this.championship = data4;
 
@@ -290,23 +290,23 @@ export default {
     async getChampionshipCF(CF){
 
 
-      const res5 = await fetch("http://api.progdb.davidebaldelli.it:1234/championship/driver/" + CF);
+      const res5 = await fetch("https://api.progdb.davidebaldelli.it/championship/driver/" + CF);
       const data5 = await res5.json();
       this.champCF = data5;
-      const res6 = await fetch("http://api.progdb.davidebaldelli.it:1234/driver/all");
+      const res6 = await fetch("https://api.progdb.davidebaldelli.it/driver/all");
       const data6 = await res6.json();
       this.pilotCF =  data6;
     },
     async getAutoPilot(cf, track){
-      const res7 = await fetch('http://api.progdb.davidebaldelli.it:1234/car/driver/' + cf +'/track/' + track);
-      const prova = 'http://api.progdb.davidebaldelli.it:1234/car/driver/' + cf +'/track/' + track;
+      const res7 = await fetch('https://api.progdb.davidebaldelli.it/car/driver/' + cf +'/track/' + track);
+      const prova = 'https://api.progdb.davidebaldelli.it/car/driver/' + cf +'/track/' + track;
       console.log(prova);
       const data7 = await res7.json();
       this.pilotCar =  data7;
 
     },
     async getTrack(){
-      const res7 = await fetch('http://api.progdb.davidebaldelli.it:1234/track/all');
+      const res7 = await fetch('https://api.progdb.davidebaldelli.it/track/all');
       const data7 = await res7.json();
       this.circuit =  data7;
 

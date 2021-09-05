@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     async getName(){
-      const res = await fetch('http://api.progdb.davidebaldelli.it:1234/manufacturer/all');
+      const res = await fetch('https://api.progdb.davidebaldelli.it/manufacturer/all');
       const data = await res.json();
       this.productor = data;
     }

@@ -134,27 +134,27 @@ export default {
   methods: {
 
     async getMostUsed(){
-      const res = await  fetch('http://api.progdb.davidebaldelli.it:1234/statistic/mostusedtracks');
+      const res = await  fetch('https://api.progdb.davidebaldelli.it/statistic/mostusedtracks');
       const data = await res.json();
       this.mostUsed = data;
     },
     async getNameManufacturer(){
-      const res2 = await  fetch('http://api.progdb.davidebaldelli.it:1234/manufacturer/all');
+      const res2 = await  fetch('https://api.progdb.davidebaldelli.it/manufacturer/all');
       const data2 = await res2.json();
       this.manufacturer = data2;
     },
     async getPartecipationCar(produttore){
-      const res3 = await  fetch('http://api.progdb.davidebaldelli.it:1234/statistic/brand/car/usage/' + produttore);
+      const res3 = await  fetch('https://api.progdb.davidebaldelli.it/statistic/brand/car/usage/' + produttore);
       const data3 = await res3.json();
       this.partecipationCar = data3;
     },
     async getNameTrack(){
-      const res2 = await  fetch('http://api.progdb.davidebaldelli.it:1234/track/all');
+      const res2 = await  fetch('https://api.progdb.davidebaldelli.it/track/all');
       const data2 = await res2.json();
       this.track = data2;
     },
     async getPartecipationLayout(pista){
-      const res2 = await  fetch('http://api.progdb.davidebaldelli.it:1234/statistic/track/layout/usage/' + pista);
+      const res2 = await  fetch('https://api.progdb.davidebaldelli.it/statistic/track/layout/usage/' + pista);
       const data2 = await res2.json();
       this.layouts = data2;
     },

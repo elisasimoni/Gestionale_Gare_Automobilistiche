@@ -161,16 +161,16 @@ export default {
   },
   methods: {
     async getName(){
-      const res = await fetch('http://api.progdb.davidebaldelli.it:1234/team/all');
+      const res = await fetch('https://api.progdb.davidebaldelli.it/team/all');
       const data = await res.json();
       this.team = data;
     },
     async getNoPartecipation(annoNo) {
 
-      const res2 = await fetch('http://api.progdb.davidebaldelli.it:1234/team/noparticipation/' + annoNo);
+      const res2 = await fetch('https://api.progdb.davidebaldelli.it/team/noparticipation/' + annoNo);
       const data2 = await res2.json();
       this.teamNo = data2;
-      let res7 = await fetch('http://api.progdb.davidebaldelli.it:1234/championship/all');
+      let res7 = await fetch('https://api.progdb.davidebaldelli.it/championship/all');
       let data7 = await res7.json();
       this.champ = data7;
       if(annoNo == null){
@@ -181,7 +181,7 @@ export default {
       }
     },
     async getCampionato(team){
-      const res3 = await fetch('http://api.progdb.davidebaldelli.it:1234/championship/team/' + team);
+      const res3 = await fetch('https://api.progdb.davidebaldelli.it/championship/team/' + team);
       const data3 = await res3.json();
       this.campionatiTeam = data3;
       if(team == null){
@@ -192,7 +192,7 @@ export default {
       }
     },
     async getGara(team){
-      const res4 = await fetch('http://api.progdb.davidebaldelli.it:1234/race/team/' + team);
+      const res4 = await fetch('https://api.progdb.davidebaldelli.it/race/team/' + team);
       const data4 = await res4.json();
       this.gareTeam = data4;
 

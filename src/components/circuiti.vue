@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     async getName(){
-      const res = await fetch('http://api.progdb.davidebaldelli.it:1234/track/all');
+      const res = await fetch('https://api.progdb.davidebaldelli.it/track/all');
       const data = await res.json();
       this.track = data;
     }
