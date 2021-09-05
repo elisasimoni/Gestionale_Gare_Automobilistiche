@@ -103,7 +103,6 @@
     </form>
    <form v-if="pilot.Name != nullo && pilot.Surname!=nullo">
      <p align="center"> <button tag="button" @click="getFirstNameLetter(pilot.Name),saveCF(first,pilot.Surname), addDateFuso(data,fuso), generate=true">GENERA CF</button></p>
-     {{pilot.Birthdate}}
      <template v-if="generate" id="cf">
         <h3 align="center">{{this.first + this.pilot.Surname}}</h3>
 
@@ -128,7 +127,10 @@
     <p align="center">
 
       <template v-if="pilot.Name!=nullo && pilot.Surname !=nullo && pilot.Sex!=nullo  && pilot.Nation!=nullo && pilot.Birthdate!=nullo">
-      <input  id="creapilota" type="button" value="Inserisci" @click="newPilot"/>
+      <input  id="creapilota" type="button" value="Inserisci" @click="newPilot, right=true"/>
+        <template v-if="right">
+              Hai creato correttamente il pilota {{pilot.Name}} {{pilot.Surname}}
+        </template>
 
       </template>
       <template v-if="pilot.Name==nullo || pilot.Surname ==nullo || pilot.Sex==nullo ||  pilot.Nation==nullo || pilot.Birthdate==nullo">
@@ -166,7 +168,8 @@ export default {
       },
     postId:"",
       data:"",
-      fuso:":00+01:00"
+      fuso:":00+01:00",
+      right:false
 
     }
   },
